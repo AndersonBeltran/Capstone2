@@ -5,15 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main>
-      <h1>National Parks</h1>
+    <header class="bg-light sticky-top container-fluid px-5 py-4 d-flex justify-content-end">
+      <ul class="nav nav-underline justify-content-around">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mountains.html">Mountains</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="national-parks.html">Parks</a>
+        </li>
+      </ul>
+    </header>
+    <main class="container mt-4">
+      <h1 class="mb-4 mt4">National Parks</h1>
+      <form class="mb-2">
+        <label class="form-label" for="parksDropdown">Park Type</label>
+        <select class="form-select" id="parksDropdown" onchange="filterParksType()">
+          <option value="">Select...</option>
+        </select>
+      </form>
+      <form class="mb-2">
+        <label class="form-label" for="parksLocationDropdown">Location/Territories</label>
+        <select class="form-select" id="parksLocationDropdown" onchange="filterParksLocation()">
+          <option value="">Select...</option>
+        </select>
+      </form>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Phone</th>
+            <th>Zip Code</th>
+            <th>Visit</th>
+          </tr>
+        </thead>
+        <tbody id="parksTBody"></tbody>
+      </table>
+      <script src="scripts/locationData.js"></script>
+      <script src="scripts/parkTypeData.js"></script>
+      <script src="scripts/nationalParkData.js"></script>
+      <script src="scripts/national-parks.js"></script>
     </main>
-    <script src="scripts/locationData.js"></script>
-    <script src="scripts/parkTypeData.js"></script>
-    <script src="scripts/nationalParkData.js"></script>
-
-    <script src="scripts/national-parks.js"></script>
   </body>
 </html>
