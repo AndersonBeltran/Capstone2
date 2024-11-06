@@ -23,17 +23,28 @@
     </header>
     <main class="container mt-4">
       <h1 class="mb-4 mt4">National Parks</h1>
+
       <form class="mb-2">
-        <label class="form-label" for="parksDropdown">Park Type</label>
-        <select class="form-select" id="parksDropdown" onchange="filterParksType()">
-          <option value="">Select...</option>
-        </select>
-      </form>
-      <form class="mb-2">
-        <label class="form-label" for="parksLocationDropdown">Location/Territories</label>
-        <select class="form-select" id="parksLocationDropdown" onchange="filterParksLocation()">
-          <option value="">Select...</option>
-        </select>
+        <div>
+          <input type="radio" name="searchType" id="locationRadio" checked />
+          <label for="locationRadio">By Location</label>
+        </div>
+        <div>
+          <input type="radio" name="searchType" id="typeRadio" />
+          <label for="typeRadio">By Type</label>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="parksDropdown">Park Type</label>
+          <select class="form-select" id="parksDropdown" onchange="filterParksType()">
+            <option value="">Select...</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="parksLocationDropdown">Location/Territories</label>
+          <select class="form-select" id="parksLocationDropdown" onchange="filterParksLocation()">
+            <option value="">Select...</option>
+          </select>
+        </div>
       </form>
       <table class="table table-striped">
         <thead>

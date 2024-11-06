@@ -8,16 +8,8 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="bg-light sticky-top container-fluid px-5 py-4 d-flex justify-content-between">
-      <nav>
-        <div class="container-fluid">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-primary" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
-      <ul class="nav nav-underline">
+    <header class="bg-light sticky-top container-fluid px-5 py-4 d-flex justify-content-end">
+      <ul class="nav nav-underline justify-content-around">
         <li class="nav-item">
           <a class="nav-link" href="index.html">Home</a>
         </li>
@@ -29,8 +21,23 @@
         </li>
       </ul>
     </header>
-    <main>
-      <h1>Mountains</h1>
+    <main class="justify-content-center">
+      <form  class="justify-content-center">
+        <div class="container">
+          <h1 class="justify-content-end mt-4 mb-4">Mountains</h1>
+          <label for="mountainSelect">Find Mountain:</label>
+          <select id="mountainSelect" onchange="displayMountainInfo()">
+            <option value="">Select..</option>
+          </select>
+          <div id="mountainInfo" class="card" style="width: 20rem;">
+            <img id="mountainImage" src="" alt="" />
+            <h4 id="mountainName"></h4>
+            <p id="effort" class="text-black"></p>
+            <p id="description"></p>
+            <p id="elevation" class="text-black"></p>
+          </div>
+        </div>
+      </form>
     </main>
     <script src="scripts/mountainData.js"></script>
     <script src="scripts/mountains.js"></script>
