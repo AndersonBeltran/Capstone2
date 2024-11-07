@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+header {
+  background: #2e8b57;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.hero {
+  background-image: url("mountain-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+
+.hero button {
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  color: #fff;
+  background: #ff8c00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background: #2e8b57;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  position: sticky;
+}
+.park-background {
+  background-image: url("/images/Park-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.scenic-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.scenic-background .content {
+  position: relative;
+  z-index: 1;
+}
+
+.scenic-background h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.scenic-background p {
+  font-size: 1.2rem;
+}
+.mountain-background {
+  background-image: url("/images/Mountain-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.mountain-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.mountain-background .content {
+  position: relative;
+  z-index: 1;
+}
+
+.mountain-background h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.mountain-background p {
+  font-size: 1.2rem;
+}

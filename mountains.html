@@ -5,41 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mountains</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
-    <header class="bg-light sticky-top container-fluid px-5 py-4 d-flex justify-content-end">
-      <ul class="nav nav-underline justify-content-around">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="mountains.html">Mountains</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="national-parks.html">Parks</a>
-        </li>
-      </ul>
+  <body style="background-color: rgb(241, 241, 241);">
+    <header>
+      <div class="logo">
+        <a>Mountains & Parks</a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="mountains.html">Mountains</a>
+        <a href="national-parks.html">Parks</a>
+      </nav>
     </header>
-    <main class="justify-content-center">
-      <form  class="justify-content-center">
-        <div class="container">
-          <h1 class="justify-content-end mt-4 mb-4">Mountains</h1>
-          <label for="mountainSelect">Find Mountain:</label>
-          <select id="mountainSelect" onchange="displayMountainInfo()">
+    <main class="container mt-4 1center-content vh-100">
+      <form >
+        <div>
+          <h1>Mountains</h1>
+          <label for="mountainSelect"><h6>Find Mountain:</h6></label>
+          <select id="mountainSelect" onchange="displayMountainInfo()" class="rounded-4 w-15 form-select mt">
             <option value="">Select..</option>
           </select>
-          <div id="mountainInfo" class="card" style="width: 20rem;">
-            <img id="mountainImage" src="" alt="" />
-            <h4 id="mountainName"></h4>
-            <p id="effort" class="text-black"></p>
-            <p id="description"></p>
-            <p id="elevation" class="text-black"></p>
+          <div id="mountainInfo" class="card p-4 mt-4" style="width: 42rem; display: none;">
+            <img id="mountainImage" src="#" alt="#" />
+            <div>
+              <h4 id="mountainName"></h4>
+              <h6><p id="effort" class="text-black"></p></h6>
+              <h6><p id="description"></p></h6>
+                <h6><p id="elevation" class="text-black"></p></h6>
+            </div>
           </div>
         </div>
       </form>
     </main>
     <script src="scripts/mountainData.js"></script>
     <script src="scripts/mountains.js"></script>
+    <footer>
+      <p>&copy; 2024 Anderson Beltran.</p>
+      <div class="social-links">
+        <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+        <a href="#">Twitter</a>
+      </div>
+    </footer>
   </body>
 </html>

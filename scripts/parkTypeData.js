@@ -61,6 +61,32 @@ function filterParksType() {
       let td7 = document.createElement("td");
       td7.innerText = Parks.Visit ? Parks.Visit : "N/A";
       tr.appendChild(td7);
+
     }
   }
 }
+
+const parkLocationRadio = document.querySelector("#parkLocationRadio");
+const parkTypesRadio = document.querySelector("#parkTypesRadio");
+
+const stateDrop = document.querySelector("#stateDrop");
+const parkTypesDrop = document.querySelector("#parkTypesDrop");
+
+function filterTypeChanged() {
+  if (parkLocationRadio.checked) {
+    stateDrop.style.display = "block";
+  } else {
+    stateDrop.style.display = "none";
+  }
+  console.log(parkLocationRadio);
+  
+  if (parkTypesRadio.checked) {
+    parkTypesDrop.style.display = "block";
+  } else {
+    parkTypesDrop.style.display = "none";
+  }
+}
+
+parkLocationRadio.onchange = filterTypeChanged;
+parkTypesRadio.onchange = filterTypeChanged;
+filterTypeChanged();

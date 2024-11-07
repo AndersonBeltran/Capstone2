@@ -5,47 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header class="bg-light sticky-top container-fluid px-5 py-4 d-flex justify-content-end">
-      <ul class="nav nav-underline justify-content-around">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="mountains.html">Mountains</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="national-parks.html">Parks</a>
-        </li>
-      </ul>
+    <header>
+      <div class="logo">
+        <a>Mountains & Parks</a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="mountains.html">Mountains</a>
+        <a href="national-parks.html">Parks</a>
+      </nav>
     </header>
-    <main class="container mt-4">
+    <main class="container mt-4 vh-500">
       <h1 class="mb-4 mt4">National Parks</h1>
 
-      <form class="mb-2">
-        <div>
-          <input type="radio" name="searchType" id="locationRadio" checked />
-          <label for="locationRadio">By Location</label>
+      <div>
+        <input type="radio" name="searchMethod" id="parkLocationRadio" checked />
+        <label for="parkLocationRadio">Location</label>
+      </div>
+      <div>
+        <input type="radio" name="searchMethod" id="parkTypesRadio" />
+        <label for="parkTypesRadio">Park Types</label>
+      </div>
+      <div class="d-flex">
+        <div id="stateDrop">
+          <form class="mb-2">
+            <label class="form-label" for="parksLocationDropdown">States</label>
+            <select class="form-label rounded-4 w-15 form-select mt" id="parksLocationDropdown" onchange="filterParksLocation()" >
+              <option value="">Select...</option>
+            </select>
+          </form>
         </div>
-        <div>
-          <input type="radio" name="searchType" id="typeRadio" />
-          <label for="typeRadio">By Type</label>
+
+        <div id="parkTypesDrop">
+          <form class="mb-2">
+            <label class="form-label" for="parksDropdown">Park Type</label>
+            <select class="form-label rounded-4 w-15 form-select mt" id="parksDropdown" onchange="filterParksType()">
+              <option value="">Select...</option>
+            </select>
+          </form>
         </div>
-        <div class="mb-3">
-          <label class="form-label" for="parksDropdown">Park Type</label>
-          <select class="form-select" id="parksDropdown" onchange="filterParksType()">
-            <option value="">Select...</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="parksLocationDropdown">Location/Territories</label>
-          <select class="form-select" id="parksLocationDropdown" onchange="filterParksLocation()">
-            <option value="">Select...</option>
-          </select>
-        </div>
-      </form>
+      </div>
+
       <table class="table table-striped">
         <thead>
           <tr>
@@ -60,10 +64,17 @@
         </thead>
         <tbody id="parksTBody"></tbody>
       </table>
-      <script src="scripts/locationData.js"></script>
-      <script src="scripts/parkTypeData.js"></script>
-      <script src="scripts/nationalParkData.js"></script>
-      <script src="scripts/national-parks.js"></script>
     </main>
+    <script src="scripts/locationData.js"></script>
+    <script src="scripts/parkTypeData.js"></script>
+    <script src="scripts/nationalParkData.js"></script>
+    <script src="scripts/national-parks.js"></script>
+    <footer>
+      <p>&copy; 2024 Anderson Beltran.</p>
+      <div class="social-links">
+        <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+        <a href="#">Twitter</a>
+      </div>
+    </footer>
   </body>
 </html>
